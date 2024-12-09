@@ -1,0 +1,761 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply box-sizing globally */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* Apply a background image to the entire body */
+body {
+  background-image: url('/public/images/home-background.png'); /* Set global background image */
+  background-size: cover; /* Ensure the image covers the entire page */
+  background-position: center center; /* Center the background image */
+  background-attachment: fixed; /* Fix the background image while scrolling */
+  margin: 0;
+  height: 100%;
+  font-family: Arial, sans-serif; /* Set a default font */
+  color: white; /* Text color for content */
+}
+
+/* App Container */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the app spans the full height */
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  flex-direction: column; /* Stack text and social links vertically */
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(74, 72, 72);
+  color: white;
+  padding: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  text-align: center;
+}
+
+.logo {
+  margin-right: 20px;
+}
+
+.logo-image {
+  width: 50px; /* Adjust size as needed */
+  height: auto;
+}
+
+.header .logo h1 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: whitesmoke;
+}
+
+.header .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.header .social-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.header .social-links img {
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.3s ease;
+}
+
+.header .social-links a:hover img {
+  opacity: 0.7;
+}
+
+/* Main Content Area */
+/* Biography Page Styles */
+.App {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 150px); /* Ensure content is centered vertically */
+}
+
+.App-content {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  background: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.App-content:hover {
+  transform: translateY(-8px); /* Subtle hover effect */
+}
+
+
+.App h1 {
+  font-size: 2rem; /* Slightly smaller font size for the heading */
+  color: rgb(46, 104, 203);
+  margin-bottom: 20px; /* Added space below the heading */
+  margin-left: 40px; /* Larger left margin */
+  margin-right: 40px; /* Larger right margin */
+}
+
+.App p {
+  font-size: 1.1rem; /* Slightly smaller font size for text */
+  color: #555;
+  line-height: 1.6;
+  max-width: 500px; /* Reduced width for better readability */
+  margin-bottom: 15px; /* Adjusted margin between paragraphs */
+  text-align: justify;
+  margin-left: 40px; /* Larger left margin */
+  margin-right: 40px; /* Larger right margin */
+}
+
+.App p:first-of-type {
+  margin-top: 30px;
+}
+
+.App p:last-of-type {
+  margin-bottom: 20px;
+}
+
+
+/* Sidebar (Navbar) Adjustment */
+.sidebar {
+  position: fixed;
+  top: 120px; /* Adjusted for header height */
+  left: 0;
+  width: 250px;
+  height: calc(100% - 120px); /* Adjust height to leave space for header */
+  background-color: rgb(46, 104, 203);
+  color: whitesmoke;
+  padding: 20px;
+  margin-top: 25px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  margin-top: 50px; /* Adjust the margin-top value as needed */
+  text-align: center; /* Centers the text horizontally */
+}
+
+.sidebar li {
+  list-style: none; /* Removes the dots from the list items */
+  padding: 0;       /* Removes default padding */
+  margin: 0;        /* Removes default margin */
+}
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+  color: whitesmoke;
+  text-decoration: none;
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar a img {
+  width: 24px; /* Icon size */
+  height: 24px;
+}
+
+.sidebar a:hover {
+  background-color: #ad1fba;
+  color: white;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Footer Styles */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(37, 35, 35);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.footer p {
+  margin-bottom: 10px;
+}
+
+.footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer .social-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer .social-links img {
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.3s ease;
+}
+
+.footer .social-links a:hover img {
+  opacity: 0.7;
+}
+
+/* Biography Page Styles */
+.biography {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 700px; 
+}
+
+.bio-container { 
+  padding: 15px; /* Reduced padding for a more compact container */
+  max-width: 700px; /* Decreased max-width for a smaller container */
+  width: 100%; /* Make it responsive, fills the screen but within max-width */
+  background: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for subtle effect */
+  box-sizing: border-box;
+  text-align: center;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Horizontally center */
+  position: relative; /* Make position relative to control placement */
+  top: 100px; /* Moves the container down from its default position */
+  margin-bottom: 50px; /* Adds more space between the bio-container and the footer */
+}
+
+.bio-container:hover {
+  transform: translateY(-8px); /* Subtle hover effect */
+}
+
+.biography h1 {
+  font-size: 2rem; /* Slightly smaller font size for the heading */
+  color: rgb(46, 104, 203);
+  margin-bottom: 20px; /* Added space below the heading */
+}
+
+.biography p {
+  font-size: 1.1rem; /* Slightly smaller font size for text */
+  color: #555;
+  line-height: 1.6;
+  max-width: 1000px; /* Reduced width for better readability */
+  margin-bottom: 15px; /* Adjusted margin between paragraphs */
+  text-align: justify;
+}
+
+.biography p:first-of-type {
+  margin-top: 20px;
+}
+
+.biography p:last-of-type {
+  margin-bottom: 20px;
+}
+
+/* Content for Interests Page */
+.places {
+  display: flex;
+  flex-direction: column;
+  padding-top: 120px; /* Adjusted for fixed header */
+  align-items: center;
+  text-align: center;
+  min-height: 100vh; /* Ensure content stretches the full height */
+}
+
+/* Grid for displaying the places */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 2 columns layout */
+  gap: 20px; /* Spacing between grid items */
+  margin-top: 20px;
+  padding: 0 20px;
+  justify-items: center; /* Center each item horizontally */
+  align-items: center; /* Center each item vertically */
+  text-align: center; /* Center the text within the grid items */
+}
+
+/* Style each place button */
+.place-item {
+  display: flex;
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Centers items vertically */
+  flex-direction: column; /* Stack the image and button vertically */
+  text-align: center; /* Centers the text inside the item */
+  margin: 0 auto; /* Horizontally centers the .place-item */
+  max-width: 100%; /* Ensures the item doesn't overflow the container */
+  width: 0%; /* Takes up the full width of its parent */
+  padding: 10px; /* Adds padding around each item for spacing */
+}
+
+/* Button styling */
+.place-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #134fdd;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Ensures the button takes full width of the container */
+  max-width: 250px; /* Limits max width to ensure button isn't too wide */
+}
+
+.place-button:hover {
+  background-color: #c639c1;
+}
+
+/* Optional: Make the grid more responsive on smaller screens */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr); /* Stacks the grid items vertically on smaller screens */
+  }
+  .place-button {
+    font-size: 1.1rem; /* Adjust button font size for smaller screens */
+  }
+}
+
+/* Places container styling */
+.places-container {
+  text-align: center; /* Center all text content */
+  width: 100%; /* Take up full width of the container */
+  max-width: 860px; /* Increased max width for a more spacious layout */
+  background: whitesmoke;
+  padding: 40px; /* Added padding for a spacious design */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-sizing: border-box; /* Ensures padding is included in width */
+  margin-top: 70px; /* Adds space at the top */
+  margin-bottom: 20px; /* Added space at the bottom to avoid crowding the footer */
+  align-self: center;
+}
+
+.places-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  color: rgb(46, 104, 203);
+}
+
+.places-container p {
+  font-size: 1.1rem; /* Slightly smaller font size for text */
+  color: #555;
+  line-height: 1.6;
+  max-width: 900px; /* Reduced width for better readability */
+  margin-bottom: 15px; /* Adjusted margin between paragraphs */
+  text-align: justify;
+}
+
+/* Style each place card */
+.project-item {
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  overflow: hidden;
+  height: 300px; /* Increased height for better content spacing */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Wrap image inside a div */
+.project-item .image-wrapper {
+  width: 100%;
+  height: 150px; /* Increased height for larger images */
+  margin-bottom: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ensure images fit within the wrapper */
+.project-item .image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images cover the area without distortion */
+  border-radius: 10px;
+}
+
+/* Title styling */
+.project-item h3 {
+  font-size: 1.2rem;
+  color: rgb(46, 104, 203);
+  margin-top: 10px; /* Spacing between image and title */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr); /* Single column on smaller screens */
+    gap: 15px;
+  }
+
+  .project-item {
+    height: auto; /* Allow flexible height for content */
+  }
+
+  .project-item .image-wrapper {
+    height: 120px; /* Reduce image size */
+  }
+}
+
+
+/* Container for the skills page */
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 120px; /* Adjust for fixed header */
+  background: url('/public/images/home-background.png') no-repeat center center fixed; /* Background image */
+  background-size: cover; /* Ensure the image covers the entire container */
+  min-height: 100vh;
+}
+
+/* Page title */
+.skills h2 {
+  font-size: 2.5rem;
+  color: #134fdd;
+  margin-bottom: 20px;
+  margin-top: 100px;
+}
+
+/* Description text */
+.skills p {
+  font-size: 1.4rem; /* Slightly smaller size for better spacing */
+  color: #555;
+  font-weight: bolder;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+
+/* Grid for the project links */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Fixed to 5 columns for one row */
+  gap: 20px; /* Spacing between items */
+  justify-content: center; /* Centers the grid horizontally */
+  align-items: center; /* Centers the items vertically within the grid */
+  width: 100%;
+  max-width: 1200px; /* Limits grid width for clean layout */
+  padding: 20px;
+}
+
+
+/* Each project item */
+.project-item {
+  text-align: center;
+  padding: 20px; /* Space inside each card */
+  border: 1px solid #ddd;
+  border-radius: 12px; /* Rounded corners */
+  background-color: whitesmoke; 
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content inside each card */
+  align-items: center; /* Centers content inside each card */
+}
+
+/* Hover effect for project items */
+.project-item:hover {
+  transform: scale(1.08); /* Slightly larger hover effect */
+  box-shadow: 0px 8px 12px rgba(210, 8, 159, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Project image styling */
+.project-item img {
+  width: 100px; /* Consistent size for all images */
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px; /* Rounded image corners */
+  margin-bottom: 15px; /* Space between image and text */
+}
+
+/* Links inside the project items */
+.project-item h3 a {
+  text-decoration: none;
+  font-size: 1.4rem; /* Larger font size */
+  color: #050f25;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.project-item h3 a:hover {
+  color: #134fdd; /* Brightened color on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .skills h2 {
+    font-size: 2rem;
+  }
+
+  .skills p {
+    font-size: 1.2rem;
+  }
+
+  .grid {
+    gap: 15px;
+  }
+
+  .project-item {
+    padding: 15px;
+  }
+
+  .project-item img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .project-item h3 a {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* Container to hold the resume section */
+.container-resume {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: flex-start; /* Align items to the top */
+  padding: 15px; /* Reduced padding for more compact layout */
+  background: url('/public/images/home-background.png') no-repeat center center fixed; /* Background image */
+  background-size: cover; /* Ensure the image covers the entire container */
+  width: 100%; /* Ensures the container takes full width */
+  height: auto; /* Allow the container to expand based on content */
+  min-height: 100vh; /* Ensure the container takes at least full viewport height */
+  overflow-y: auto; /* Allow scrolling if content exceeds the container's height */
+  margin: 0; /* Ensure no external margin */
+}
+
+/* Resume section styling */
+.resume {
+  text-align: center; /* Center all text content */
+  width: 100%; /* Take up full width of the container */
+  max-width: 1000px; /* Reduced max width for a more compact layout */
+  background-color: rgb(221, 213, 213); 
+  padding: 20px; /* Reduced padding for smaller design */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: hidden;
+  box-sizing: border-box; /* Ensures padding is included in width */
+  margin-top: 150px; /* Adds space at the top */
+}
+
+/* Styling for the page title */
+.resume h1 {
+  font-size: 2rem; /* Reduced font size for better fit */
+  color: #134fdd;
+  margin-bottom: 20px; /* Increased bottom margin for spacing */
+  font-weight: bold;
+  margin-top: 150; /* Ensure no top margin, so title is visible at the top */
+}
+
+/* Styling for the iframe (PDF viewer) */
+.resume iframe {
+  border: none;
+  width: 100%; /* Ensure iframe spans full width of its container */
+  height: 70vh; /* Adjust height to take up 70% of the viewport height */
+  margin-bottom: 20px; /* Space between PDF and download button */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow around iframe */
+  display: block; /* Ensures no extra space around iframe */
+  object-fit: contain; /* Ensures the content scales appropriately without distortion */
+}
+
+/* Download button styling */
+.download-link {
+  margin-top: 20px; /* Adjust margin for bottom placement */
+  margin-bottom: 30px; /* Ensure space at the bottom */
+}
+
+.download-link .btn {
+  padding: 12px 25px; /* Adjust button padding for a more compact look */
+  font-size: 1.1rem; /* Smaller font size for the button */
+  background-color: #134fdd;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.download-link .btn:hover {
+  background-color: #c639c1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container-resume {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .resume {
+    max-width: 90%; /* Allow resume section to take up more space on small screens */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .resume h1 {
+    font-size: 1.6rem; /* Smaller title size on mobile */
+    margin-bottom: 10px; /* Smaller margin for title */
+  }
+
+  .resume iframe {
+    height: 50vh; /* Reduce iframe height on small screens */
+  }
+
+  .download-link .btn {
+    font-size: 1rem; /* Slightly smaller button text */
+    padding: 8px 18px; /* Adjust button padding */
+  }
+}
+
+/* Contact Page Container */
+
+/* Contact Page Container */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('/public/images/home-background.png') no-repeat center center fixed; /* Background image */
+  background-size: cover; /* Ensure the image covers the entire container */
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+/* Form Styling */
+.contact-form {
+  width: 100%;
+  max-width: 500px;
+  background: url('/public/images/background2.jpg') no-repeat center center fixed; /* Background image */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+/* Input Validation Styling */
+.contact-form input:invalid,
+.contact-form textarea:invalid {
+  border: 1px solid #ff4d4d; /* Highlight invalid fields in red */
+  background-color: #ffe6e6; /* Light red background for invalid fields */
+}
+
+.contact-form input:valid,
+.contact-form textarea:valid {
+  border: 1px solid #4caf50; /* Green border for valid fields */
+  background-color: #e8f5e9; /* Light green background for valid fields */
+}
+
+/* Other Form Styles (unchanged) */
+.contact-form h2 {
+  font-size: 1.8rem;
+  color: #134fdd;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.contact-form p {
+  font-size: 1.1rem; /* Slightly smaller font size for text */
+  color: #555;
+  line-height: 1.6;
+  max-width: 500px; /* Reduced width for better readability */
+  margin-bottom: 15px; /* Adjusted margin between paragraphs */
+  text-align: justify;
+  margin-left: 40px; /* Larger left margin */
+  margin-right: 40px; /* Larger right margin */
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: #134fdd;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #c639c1;
+}
+
