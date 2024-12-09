@@ -2,6 +2,11 @@
 
 Welcome to **My Portfolio**, a comprehensive web application designed to showcase my skills, interests, projects, and professional background. This interactive and user-friendly portfolio aims to provide a dynamic experience for visitors while highlighting the technical expertise gained through the **CS601 Web Application Development** course.
 
+## **Links**
+
+Deployment: https://cs601-final-project-portfolio.netlify.app/
+
+GitHub: https://github.com/JohnGutierrez1027/Final-Project-My-Portfolio
 
 ## **Features**
 ### **General**
