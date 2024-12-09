@@ -25,7 +25,7 @@ const Skills = () => {
     },
     {
       name: "React Dynamic Routing Inventory App",
-      url: "https://codepen.io",
+      url: "https://inventory-app-hw5-6.netlify.app/",
       image: "/images/grocery.gif",
     },
   ];
