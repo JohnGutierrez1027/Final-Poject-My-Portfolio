@@ -36,7 +36,7 @@ const Skills = () => {
       <Header />
       <h2>My Skills</h2>
       <p>Click on my project demos below</p>
-      <div className="grid">
+      <div className="grid-skills">
         {projects.map((project, index) => (
           <div className="project-item" key={index}>
             <a href={project.url} target="_blank" rel="noreferrer">

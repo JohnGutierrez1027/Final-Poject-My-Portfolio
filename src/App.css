@@ -31,13 +31,6 @@ body {
   color: white; 
 }
 
-/* App Container */
-.App {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; 
-}
-
 /* Header Styles */
 .header {
   display: flex;
@@ -102,12 +95,14 @@ body {
   align-items: center;
   justify-content: center;
   height: calc(100vh - 150px); 
+  min-height: 100vh; 
 }
 
 .App-content {
   padding: 20px;
   max-width: 800px;
-  margin: 0 auto;
+  margin-top: 150px;
+  margin-left: 250px;
   text-align: center;
   background: whitesmoke;
   border-radius: 10px;
@@ -257,7 +252,7 @@ body {
 }
 
 .bio-container { 
-  padding: 15px; 
+  padding: 5px; 
   max-width: 700px; 
   width: 100%; 
   background: whitesmoke;
@@ -270,10 +265,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto; 
   position: relative; 
-  top: 100px; 
+  margin-top: 220px; 
   margin-bottom: 50px; 
+  margin-left: 250px;
 }
 
 .bio-container:hover {
@@ -287,7 +282,7 @@ body {
 }
 
 .biography p {
-  font-size: 1.1rem; 
+  font-size: 1rem; 
   color: #555;
   line-height: 1.6;
   max-width: 1000px; 
@@ -295,22 +290,15 @@ body {
   text-align: justify;
 }
 
-.biography p:first-of-type {
-  margin-top: 20px;
-}
-
-.biography p:last-of-type {
-  margin-bottom: 20px;
-}
-
 /* Content for Interests Page */
 .places {
   display: flex;
   flex-direction: column;
-  padding-top: 120px; 
+  padding-top: 50px; 
   align-items: center;
   text-align: center;
   min-height: 100vh; 
+  background-image: url('/public/images/home-background.png');
 }
 
 /* Grid for displaying the places */
@@ -319,10 +307,11 @@ body {
   grid-template-columns: repeat(4, 1fr); 
   gap: 20px;
   margin-top: 20px;
-  padding: 0 20px;
+  padding: 20px;
   justify-items: center; 
   align-items: center; 
   text-align: center; 
+  margin-left: 30px;
 }
 
 /* Style each place button */
@@ -333,7 +322,6 @@ body {
   flex-direction: column; 
   text-align: center; 
   margin: 0 auto; 
-  max-width: 100%; 
   width: 0%; 
   padding: 10px; 
 }
@@ -370,21 +358,21 @@ body {
 .places-container {
   text-align: center; 
   width: 100%; 
-  max-width: 860px; 
+  max-width: 900px; 
   background: whitesmoke;
-  padding: 40px; 
+  padding: 10px; 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   box-sizing: border-box; 
-  margin-top: 70px; 
-  margin-bottom: 20px; 
-  align-self: center;
+  margin-top: 150px; 
+  margin-bottom: 50px; 
+  margin-left: 250px;
 }
 
 .places-container h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  margin-top: 50px;
+  margin-top: 20px;
   color: rgb(46, 104, 203);
 }
 
@@ -393,7 +381,7 @@ body {
   color: #555;
   line-height: 1.6;
   max-width: 900px; 
-  margin-bottom: 15px; 
+  margin-bottom: 5px; 
   text-align: justify;
 }
 
@@ -464,6 +452,7 @@ body {
   background: url('/public/images/home-background.png') no-repeat center center fixed; 
   background-size: cover; 
   min-height: 100vh;
+  align-content: center;
 }
 
 /* Page title */
@@ -472,6 +461,7 @@ body {
   color: #134fdd;
   margin-bottom: 20px;
   margin-top: 100px;
+  margin-left: 250px;
 }
 
 /* Description text */
@@ -481,18 +471,20 @@ body {
   font-weight: bolder;
   margin-bottom: 30px;
   margin-top: 20px;
+  margin-left: 250px;
 }
 
 /* Grid for the project links */
-.grid {
+.grid-skills {
   display: grid;
   grid-template-columns: repeat(5, 1fr); 
   gap: 20px; 
   justify-content: center; 
   align-items: center; 
   width: 100%;
-  max-width: 1200px; 
+  max-width: 1000px; 
   padding: 20px;
+  margin-left: 250px;
 }
 
 /* Each project item */
@@ -579,7 +571,7 @@ body {
   height: auto; 
   min-height: 100vh; 
   overflow-y: auto; 
-  margin: 0; 
+  margin-left: 120px;
 }
 
 /* Resume section styling */
@@ -602,7 +594,7 @@ body {
   color: #134fdd;
   margin-bottom: 20px;
   font-weight: bold;
-  margin-top: 30px; 
+  margin-top: 0px; 
 }
 
 /* Styling for the iframe (PDF viewer) */
@@ -674,7 +666,8 @@ body {
   background-size: cover; 
   padding: 20px;
   box-sizing: border-box;
-  margin-top: 50px;
+  margin-top: 150px;
+  margin-left: 200px;
   margin-bottom: 0;
 }
 
